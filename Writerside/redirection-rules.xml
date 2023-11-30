@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="6f6d9953">
+        <description>Created after removal of "Empty MD Topic" from Help Instance</description>
+        <accepts>Empty-MD-Topic.html</accepts>
+    </rule>
+    <rule id="24aa215c">
+        <description>Created after removal of "This is the first topic" from Help Instance</description>
+        <accepts>Default-topic.html</accepts>
+    </rule>
+    <rule id="2672e36c">
+        <description>Created after removal of "Section Starting Page" from Help Instance</description>
+        <accepts>Section-Starting-Page.html</accepts>
+    </rule>
+    <rule id="7821416c">
+        <description>Created after removal of "Tutorial" from Help Instance</description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
+    <rule id="4501743a">
+        <description>Created after removal of "Empty MD Topic" from Help Instance</description>
+        <accepts>Empty-MD-Topic.html</accepts>
+    </rule>
+    <rule id="536def4c">
+        <description>Created after removal of "Overview" from Help Instance</description>
+        <accepts>Overview.html</accepts>
+    </rule>
+    <rule id="2ccf463b">
+        <description>Created after removal of "Reference" from Help Instance</description>
+        <accepts>java.html</accepts>
+    </rule>
+</rules>
