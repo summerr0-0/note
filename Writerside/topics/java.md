@@ -1,3 +1,0 @@
-# java
-
-Start typing here...
