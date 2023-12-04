@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Help Instance"
+                 start-page="Default-topic.md">
+
+    <toc-element topic="Default-topic.md"/>
+    <toc-element topic="etc.md">
+        <toc-element topic="use-writer-side.md"/>
+    </toc-element>
+    <toc-element topic="javascript.md">
+        <toc-element topic="why-need-nextjs.md"/>
+    </toc-element>
+    <toc-element topic="jvm.md"/>
+    <toc-element topic="architecture.md">
+        <toc-element topic="book-object.md">
+            <toc-element topic="ch-7.md"/>
+        </toc-element>
+        <toc-element topic="do-not-return-entity.md"/>
+    </toc-element>
+</instance-profile>
