@@ -28,3 +28,6 @@
 * 영속성 필요없음
 * 변경이 잦고 빠른 액세스 속도가 필요
 
+![session.png](session.png)
+
+![session2.png](session2.png)
