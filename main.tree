@@ -22,6 +22,10 @@
         <toc-element topic="book-object.md">
             <toc-element topic="ch-7.md"/>
             <toc-element topic="ch-8.md"/>
+            <toc-element topic="ch-9.md">
+            </toc-element>
+            <toc-element topic="ch-10.md"/>
+            <toc-element topic="ch-11.md"/>
         </toc-element>
         <toc-element topic="do-not-return-entity.md"/>
     </toc-element>
