@@ -10,4 +10,12 @@
         <description>Created after removal of "rerisSession" from main</description>
         <accepts>rerisSession.html</accepts>
     </rule>
+    <rule id="379fb9bc">
+        <description>Created after removal of "의존성 추가" from main</description>
+        <accepts>의존성-추가.html</accepts>
+    </rule>
+    <rule id="9e17638">
+        <description>Created after removal of "etc" from main</description>
+        <accepts>etc.html</accepts>
+    </rule>
 </rules>
