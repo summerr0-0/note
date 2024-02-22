@@ -1,0 +1,110 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-colors-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-02-22T22:52:43.438738"><title>memento-pattern | main</title><script type="application/json" id="virtual-toc-data">[{"id":"9e20964a_1278","level":0,"title":"구성","anchor":"#9e20964a_1278"},{"id":"9e20964a_1292","level":0,"title":"대표적 예시","anchor":"#9e20964a_1292"},{"id":"9e20964a_1297","level":0,"title":"게시글 이전 버전으로 되돌리기","anchor":"#9e20964a_1297"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.6.6-b205/app.css" rel="stylesheet"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><link rel="manifest" href="site.webmanifest"><meta name="msapplication-TileColor" content="#000000"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="memento-pattern | main"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="main Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="memento-pattern.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="memento-pattern | main"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "memento-pattern.html#webpage",
+    "url": "memento-pattern.html",
+    "name": "memento-pattern | main",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "/#website",
+    "url": "/",
+    "name": "main Help"
+}</script><!-- End Schema.org --></head><body data-id="memento-pattern" data-main-title="memento-pattern" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="architecture.md|architecture///design-pattern.md|design-pattern"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>main  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="memento-pattern" id="memento-pattern.md">memento-pattern</h1><ul class="list _ul" id="9e20964a_1275"><li class="list__item" id="9e20964a_1276"><p>객체의 상태를 이전 상태로 복원하는 패턴</p></li><li class="list__item" id="9e20964a_1277"><p>객체가 자신의 상태를 어떤 시점에 저장하고 필요할 때 그 시점의 상태로 복원 가능</p></li></ul><section class="chapter"><h2 id="9e20964a_1278" data-toc="9e20964a_1278">구성</h2><p id="9e20964a_1279">Originator(발생자)</p><ul class="list _ul" id="9e20964a_1280"><li class="list__item" id="9e20964a_1281"><p>상태를 저장해야될 객체</p></li><li class="list__item" id="9e20964a_1282"><p><code class="code" id="9e20964a_1283">Originator</code>는 메멘토 객체를 생성해서 현재 상태를 저장하고 메멘토를 이용해서 이전으로 복원 가능 Memento(메멘토)</p></li><li class="list__item" id="9e20964a_1284"><p><code class="code" id="9e20964a_1285">Originator</code> 객체의 상태를 저장하는 객체</p></li><li class="list__item" id="9e20964a_1286"><p><code class="code" id="9e20964a_1287">Originator</code>의 내부 상태를 그대로 가지고 있지만 그 내부 상태에는 직접 접근할 수 없도록 캡슐화 Caretaker(관리자)</p></li><li class="list__item" id="9e20964a_1288"><p><code class="code" id="9e20964a_1289">Memento</code>를 보관하는 객체</p></li><li class="list__item" id="9e20964a_1290"><p><code class="code" id="9e20964a_1291">Memento</code>를 저장하거나 복원하는 역할이지만 메멘토의 내용을 조작하거나 직접 접근하면 안된다</p></li></ul></section><section class="chapter"><h2 id="9e20964a_1292" data-toc="9e20964a_1292">대표적 예시</h2><ul class="list _ul" id="9e20964a_1293"><li class="list__item" id="9e20964a_1294"><p>텍스트 에디터의 Undo</p></li><li class="list__item" id="9e20964a_1295"><p>체크포인트</p></li><li class="list__item" id="9e20964a_1296"><p>버전관리 시스템</p></li></ul></section><section class="chapter"><h2 id="9e20964a_1297" data-toc="9e20964a_1297">게시글 이전 버전으로 되돌리기</h2><div class="code-block" data-lang="java">
+
+// Originator
+//실제 게시글
+//memento를 통해 이전 상태로 복원한다
+class Post {
+    private String content;
+    private LocalDateTime editTime;
+
+    public void setContent(String content) {
+        this.content = content;
+        this.editTime = LocalDateTime.now();
+    }
+
+//이전 상태 저장
+    public PostMemento save() {
+        return new PostMemento(this.content, this.editTime);
+    }
+
+//memento를 이용해서 이전 값 가져온다
+    public void restore(PostMemento memento) {
+        this.content = memento.getContent();
+        this.editTime = memento.getEditTime();
+    }
+}
+
+// Memento
+// 댓글의 상태를 내부적으로 저장
+// 외부에서 이 값을 수정할 수 없음
+class PostMemento {
+    private final String content;
+    private final LocalDateTime editTime;
+
+    public PostMemento(String content, LocalDateTime editTime) {
+        this.content = content;
+        this.editTime = editTime;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public LocalDateTime getEditTime() {
+        return editTime;
+    }
+}
+
+// Caretaker
+//사용자가 글을 수정할 때마다 Memento 객체 저장
+class EditHistory {
+    private final List&lt;PostMemento&gt; history = new ArrayList&lt;&gt;();
+
+    //글을 수정할 때마다 Originator에서 생성된 Memento 객체 저장
+    //사용자가 특정 버전으로 롤백을 요청할 때 해당 Memento 객체를 Originator에 전달해서 상태를 복원한다
+    public void saveMemento(PostMemento memento) {
+        history.add(memento);
+    }
+
+    public PostMemento getMemento(int index) {
+        return history.get(index);
+    }
+}
+
+//사용
+public class Main {
+    public static void main(String[] args) {
+        // 게시물 생성 및 초기 상태 설정
+        Post post = new Post();
+        post.setContent(&quot;처음 작성된 게시물 내용&quot;);
+        
+        // EditHistory 객체 생성
+        EditHistory history = new EditHistory();
+        
+        // 현재 상태를 저장
+        history.saveMemento(post.save());
+
+        // 게시물 수정 1차
+        post.setContent(&quot;첫 번째로 수정된 게시물 내용&quot;);
+        // 수정된 상태를 저장
+        history.saveMemento(post.save());
+
+        // 게시물 수정 2차
+        post.setContent(&quot;두 번째로 수정된 게시물 내용&quot;);
+        // 수정된 상태를 저장
+        history.saveMemento(post.save());
+
+        // 이전 상태로 복원해보기
+        // 예를 들어, 첫 번째 수정 상태로 되돌아가기
+        post.restore(history.getMemento(1)); // 인덱스는 0부터 시작하므로, 첫 번째 수정 상태는 인덱스 1에 해당
+
+        System.out.println(&quot;복원된 게시물 내용: &quot; + post.getContent());
+        // 출력: 복원된 게시물 내용: 첫 번째로 수정된 게시물 내용
+    }
+}
+</div></section><div class="last-modified">Last modified: 22 2월 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="bridge-pattern.html" class="navigation-links__prev">bridge-pattern</a><a href="state-pattern.html" class="navigation-links__next">state-pattern</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.6.6-b205/app.js"></script></body></html>

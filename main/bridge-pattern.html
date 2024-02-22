@@ -1,0 +1,69 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-colors-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-02-22T22:52:43.408767"><title>bridge-pattern | main</title><script type="application/json" id="virtual-toc-data">[{"id":"84f37e85_1203","level":0,"title":"구성","anchor":"#84f37e85_1203"},{"id":"84f37e85_1214","level":0,"title":"대표적 예시","anchor":"#84f37e85_1214"},{"id":"84f37e85_1222","level":0,"title":"결제","anchor":"#84f37e85_1222"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.6.6-b205/app.css" rel="stylesheet"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><link rel="manifest" href="site.webmanifest"><meta name="msapplication-TileColor" content="#000000"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="bridge-pattern | main"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="main Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="bridge-pattern.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="bridge-pattern | main"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "bridge-pattern.html#webpage",
+    "url": "bridge-pattern.html",
+    "name": "bridge-pattern | main",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "/#website",
+    "url": "/",
+    "name": "main Help"
+}</script><!-- End Schema.org --></head><body data-id="bridge-pattern" data-main-title="bridge-pattern" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="architecture.md|architecture///design-pattern.md|design-pattern"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>main  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="bridge-pattern" id="bridge-pattern.md">bridge-pattern</h1><ul class="list _ul" id="84f37e85_1199"><li class="list__item" id="84f37e85_1200"><p>구현 부분과 추상화된 부분을 분리하여, 각각 독립적으로 변형이 가능하도록 만드는 디자인 패턴</p></li><li class="list__item" id="84f37e85_1201"><p>추상화와 구현을 분리하여 서로 독립적으로 확장할 수 있게 도와줍니다.</p></li><li class="list__item" id="84f37e85_1202"><p>브릿지는 두 구성 요소 간의 '가교' 역할을 함으로써 둘 사이의 결합도를 낮추고 유연성을 향상시킨다</p></li></ul><section class="chapter"><h2 id="84f37e85_1203" data-toc="84f37e85_1203">구성</h2><p id="84f37e85_1204">추상화 계층</p><ul class="list _ul" id="84f37e85_1205"><li class="list__item" id="84f37e85_1206"><p>Abstraction :추상적인 인터페이스 제공 </p><ul class="list _ul" id="84f37e85_1207"><li class="list__item" id="84f37e85_1208"><p>RefinedAbstraction :추상화를 확장하여 새로운 기능 추가 구현 계층</p></li></ul></li><li class="list__item" id="84f37e85_1209"><p>Implementor :구현에 대한 인터페이스 정의 </p><ul class="list _ul" id="84f37e85_1210"><li class="list__item" id="84f37e85_1211"><p>ConcreteImplementorA : Implementor 인터페이스의 구현</p></li><li class="list__item" id="84f37e85_1212"><p>ConcreteImplementorB :Implementor 인터페이스의 또 다른 구현 </p><figure id="84f37e85_1213"><img alt="image_2.png" src="images/image_2.png" title="image_2.png" width="563" height="305"></figure></li></ul></li></ul></section><section class="chapter"><h2 id="84f37e85_1214" data-toc="84f37e85_1214">대표적 예시</h2><ul class="list _ul" id="84f37e85_1215"><li class="list__item" id="84f37e85_1216"><p><code class="code" id="84f37e85_1217">PlatformTransactionManager</code> 에서 브릿지 패턴을 사용하고 있다 </p><ul class="list _ul" id="84f37e85_1218"><li class="list__item" id="84f37e85_1219"><p><code class="code" id="84f37e85_1220">JdbcTransactionManager</code>, <code class="code" id="84f37e85_1221">JpaTransactionManager</code> 를 구현체로 사용한다</p></li></ul></li></ul></section><section class="chapter"><h2 id="84f37e85_1222" data-toc="84f37e85_1222">결제</h2><div class="code-block" data-lang="java">
+// 추상화 계층
+public interface PaymentProcessor {
+    void processPayment(PaymentData data);
+}
+
+//추상화 계층 구현
+public class PaymentProcessorImpl implements PaymentProcessor {
+    private PaymentMethod paymentMethod;
+
+    public PaymentProcessorImpl(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    @Override
+    public void processPayment(PaymentData data) {
+        paymentMethod.pay(data);
+    }
+}
+    
+// 구현 계층 인터페이스
+public interface PaymentMethod {
+    void pay(PaymentData data);
+}
+
+// 신용카드 구현
+public class CreditCardPaymentMethod implements PaymentMethod {
+    @Override
+    public void pay(PaymentData data) {
+        // 신용카드 결제 처리 로직
+    }
+}
+
+// 토스 구현
+public class TossPaymentMethod implements PaymentMethod {
+    @Override
+    public void pay(PaymentData data) {
+        // 토스 결제 처리 로직
+    }
+}
+
+// 결제
+public class CheckoutService {
+    public void checkout(Cart cart, PaymentData paymentData) {
+      //결제수단을 자유롭게 바꿀 수 있음
+        PaymentMethod paymentMethod = getPaymentMethodFor(paymentData);
+        //새로운 결제방식이 추가되어도 paymentProcessor 수정할 필요 없음
+        PaymentProcessor paymentProcessor = new PaymentProcessorImpl(paymentMethod);
+        paymentProcessor.processPayment(paymentData);
+        
+    }
+}
+
+</div></section><div class="last-modified">Last modified: 22 2월 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="design-pattern.html" class="navigation-links__prev">design-pattern</a><a href="memento-pattern.html" class="navigation-links__next">memento-pattern</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.6.6-b205/app.js"></script></body></html>
