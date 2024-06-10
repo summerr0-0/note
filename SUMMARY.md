@@ -49,5 +49,6 @@
   * [설정](topics/설정.md)
   * [스프링 삼각형](topics/스프링-삼각형.md)
   * [예매시스템구축하기](topics/예매시스템구축하기.md)
-* [spring security](spring-security.md)
+* [spring security](spring-security/README.md)
+  * [인증 / 인가 흐름](spring-security/undefined.md)
 * [객체지향의 사실과 오해](undefined.md)
